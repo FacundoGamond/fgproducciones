@@ -1,0 +1,56 @@
+<div class="total" id="contact">
+    <div id="center">
+        <div id="line"></div>
+        <h2>CONTACTO</h2>
+        <p>
+            Ponete en contacto y pedí tu cotización!
+        </p>
+
+        <div *ngIf="!sended" id="loading">
+            <img src="../../../assets/image/loading.gif">
+        </div>
+        <div id="contact-all" *ngIf="sended">
+            <section id="contact-data">
+                <h3>¿Como consulto?</h3>
+                <p id="contact-text">
+                    Podes enviarnos mensajes a través de instagram, whatsapp o rellenar el siguiente
+                    formulario así nosotros te contactamos!
+                </p>
+                <form id="contact-form" #projectForm="ngForm" (ngSubmit)="onSubmit(projectForm)">
+                    <section id="form-total">
+                        <section id="form-left">
+                            <div>
+                                <label for="name">Nombre</label><br>
+                                <input type="text" name="name" #name="ngModel" [(ngModel)]="emailData.name" required>
+                            </div>
+                            <div>
+                                <label for="last-name">Apellido</label><br>
+                                <input type="text" name="last-name" #last_name="ngModel"
+                                    [(ngModel)]="emailData.lastName" required>
+                            </div>
+                        </section>
+                        <section id="form-right">
+                            <div>
+                                <label for="phone">Teléfono/Celular</label><br>
+                                <input type="number" name="phone" #phone="ngModel" [(ngModel)]="emailData.phone"
+                                    required>
+                            </div>
+                            <div>
+                                <label for="">Email</label><br>
+                                <input type="text" name="name" #email="ngModel" [(ngModel)]="emailData.email" required>
+                            </div>
+                        </section>
+                        <div class="clearfix"></div>
+                    </section>
+                    <input type="submit" value="Enviar">
+                </form>
+            </section>
+
+            <section id="contact-way">
+                <span>Whatsapp: 3513246599</span>
+                <span>Instagram: fg.produccion</span>
+                <div class="clearfix"></div>
+            </section>
+        </div>
+    </div>
+</div>

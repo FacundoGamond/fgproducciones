@@ -1,0 +1,30 @@
+<header id="header">
+    <div id="logo">
+        <span>FG PRODUCCIONES</span>
+    </div>
+
+    <div id="menu-button" (click)="toggleMenu()">
+        <img src="../../../assets/image/menu.png" alt="">
+    </div>
+
+    <nav id="menu">
+        <ul>
+            <li><span (click)="scrollTo('#home')">INICIO</span></li>
+            <li><span (click)="scrollTo('#trajectory')">TRAYECTORIA</span></li>
+            <li><span (click)="scrollTo('#vision')">VISION</span></li>
+            <li><span (click)="scrollTo('#music')">MUSICA</span></li>
+            <li><span (click)="scrollTo('#contact')">CONTACTO</span></li>
+        </ul>
+    </nav>
+    <div class="clearfix"></div>
+
+    <nav id="menu-responsive">
+        <ul>
+            <li><span (click)="scrollTo('#home')">INICIO</span></li>
+            <li><span (click)="scrollTo('#trajectory')">TRAYECTORIA</span></li>
+            <li><span (click)="scrollTo('#vision')">VISION</span></li>
+            <li><span (click)="scrollTo('#music')">MUSICA</span></li>
+            <li><span (click)="scrollTo('#contact')">CONTACTO</span></li>
+        </ul>
+    </nav>
+</header>
